@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Your wallet</h1>
+        <p>Finance management tool only for you</p>
+    </header>
+    <main>
+        <section class="transactions">
+            <h2 class="title">Transaction list:</h2>
+            <div class="transaction_list">
+                <div class="income_area">
+                    <h3>Income:</h3>
+                    <div class="transaction" id="0">
+                        <p class="transaction-name">Payment</p>
+                        <p class="transaction-amount">13000 <button class="delete">X</button></p>
+                    </div>
+                </div>
+
+                <div class="expenses_area">
+                    <h3>Expenses:</h3>
+                    <div class="transaction" id="1">
+                        <p class="transaction-name">Shopping</p>
+                        <p class="transaction-amount">-800 <button class="delete">X</button></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="options">
+            <div>
+                <h2 class="title">Available money:</h2>
+                <p class="available-money">200000 zł</p>
+            </div>
+            <div class="controls">
+                <button class="add-transaction">Add new transaction</button>
+                <button class="delete-all">Delete all transactions</button>
+            </div>
+            <div class="style-selection">Choose your theme:</div>
+            <div class="color-buttons">
+                <button class="light"></button>
+                <button class="dark"></button>
+            </div>
+        </section>
+    </main>
+
+    <div class="add-transaction-panel">
+        <h2 class="title">New transaction</h2>
+
+        <label for="name">Name:</label>
+        <small>(input transaction name)</small>
+        <input type="text" id="name">
+
+        <label for="amount">Amount:</label>
+        <small>(input transaction amount)</small>
+        <input type="number" id="amount">
+
+        <label for="category">Category:</label>
+        <small>(pick transaction category: + means income, - expense)</small>
+        <select id="category">
+            <option value="none" selected disabled></option>
+            <option value="income">[ + ] Income</option>
+            <option value="expense">[ - ] Expense</option>
+        </select>
+
+        <div class="panel-buttons">
+            <button class="save">Save</button>
+            <button class="cancel">Cancel</button>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
