@@ -120,7 +120,7 @@ h2.title {
 .options {
     padding: 80px 40px;
     width: 500px;
-    border: 1px solid var(--border-color);
+    border: 1px solid transparent;
 }
 
 .available-money {
@@ -244,13 +244,13 @@ h2.title {
     padding: 15px 40px;
     font-size: 18px;
     color: #fff;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     background: none;
     cursor: pointer;
     transition: background-color .3s;
 }
 
 .add-transaction-panel button:hover {
-    background-color: rgb(25, 27, 51);
+    background-color: rgb(24, 27, 51);
 
 }
